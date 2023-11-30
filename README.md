@@ -72,10 +72,11 @@ module "ado_vmss_agent_pool" {
 
 ## Outputs
 
-| Name                                                                                                                          | Description                                          |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| <a name="output_vmss_id"></a> [vmss\_id](#output\_vmss\_id) | VM Scale Sets id |
-| <a name="output_public_ip_prefix"></a> [public\_ip\_prefix](#output\_public\_ip\_prefix) | Public IP Address Prefix CIDR |
+| Name                                                                                     | Description                     |
+|------------------------------------------------------------------------------------------|---------------------------------|
+| <a name="output_vmss_id"></a> [vmss\_id](#output\_vmss\_id)                              | VM Scale Sets id                |
+| <a name="output_public_ip_prefix"></a> [public\_ip\_prefix](#output\_public\_ip\_prefix) | Public IP Address Prefix CIDR   |
+| <a name="output_tls_key"></a> [tls\_key](#output\_tls\_key)                              | SSH Key for VMSS authorization  |
 
 <!-- END_TF_DOCS -->
 
