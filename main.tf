@@ -18,7 +18,7 @@ module "vmss" {
     type                 = "CustomScript"
     type_handler_version = "2.0"
     settings = jsonencode({
-      "script" : (base64encode("apt-get update -y && apt-get upgrade -y; apt-get -y install unzip"))
+      "script" : (base64encode("apt-get update -y && apt-get upgrade -y && apt-get install unzip -y"))
     })
   }]
 }
