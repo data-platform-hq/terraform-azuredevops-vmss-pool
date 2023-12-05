@@ -12,15 +12,6 @@ module "vmss" {
   resource_group = var.resource_group
   admin_ssh_key  = { public_key = tls_private_key.this.public_key_openssh }
   subnet         = var.subnet_id
-  extensions = [{
-    name                 = "packages"
-    publisher            = "Microsoft.Azure.Extensions"
-    type                 = "CustomScript"
-    type_handler_version = "2.0"
-    settings = jsonencode({
-      "script" : (base64encode("apt-get update -y && apt-get upgrade -y && apt-get install unzip -y"))
-    })
-  }]
 }
 
 data "azuredevops_project" "this" {
