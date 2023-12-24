@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.0.2...v1.0.3) (2023-12-24)
+
+
+### Bug Fixes
+
+* updated vmss module version; added var for public ip prefix ([18361f6](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/18361f60e5c57e0d652e1aa3d7b08fca7726e64d))
+
 ## [1.0.2](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.0.1...v1.0.2) (2023-12-05)
 
 
