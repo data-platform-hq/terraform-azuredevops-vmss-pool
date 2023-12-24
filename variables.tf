@@ -43,3 +43,10 @@ variable "ado_vmss_pool_configuration" {
   })
   default = {}
 }
+
+variable "ado_vmss_public_ip_prefix_enabled" {
+  description = "Boolean flag that determines whether Public IP Prefix is assigned to VM Scale Sets"
+  type = bool
+  default = true
+}
+

@@ -5,13 +5,14 @@ resource "tls_private_key" "this" {
 
 module "vmss" {
   source  = "data-platform-hq/vmss/azurerm"
-  version = "1.1.0"
+  version = "1.2.0"
 
   scale_set_name = var.vm_scale_set_name
   location       = var.location
   resource_group = var.resource_group
   admin_ssh_key  = { public_key = tls_private_key.this.public_key_openssh }
-  subnet         = var.subnet_id
+  subnet_id         = var.subnet_id
+  public_ip_prefix_enabled = var.ado_vmss_public_ip_prefix_enabled
 }
 
 data "azuredevops_project" "this" {
