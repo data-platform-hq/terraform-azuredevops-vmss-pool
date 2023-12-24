@@ -44,7 +44,7 @@ module "ado_vmss_agent_pool" {
 
 | Module                                                             | Path                           | Version |
 |--------------------------------------------------------------------|--------------------------------|---------|
-| [vmss](https://github.com/data-platform-hq/terraform-azurerm-vmss) | data-platform-hq/vmss/azurerm  | 1.1.0   |
+| [vmss](https://github.com/data-platform-hq/terraform-azurerm-vmss) | data-platform-hq/vmss/azurerm  | 1.2.0   |
 
 ## Resources
 
