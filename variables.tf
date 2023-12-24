@@ -49,4 +49,3 @@ variable "ado_vmss_public_ip_prefix_enabled" {
   type        = bool
   default     = true
 }
-
