@@ -49,3 +49,9 @@ variable "ado_vmss_public_ip_prefix_enabled" {
   type        = bool
   default     = true
 }
+
+variable "create_ado_resources" {
+  description = "Boolean flag that determines whether ADO resources will be created"
+  type        = bool
+  default     = true
+}
