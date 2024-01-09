@@ -16,15 +16,18 @@ module "vmss" {
 }
 
 data "azuredevops_project" "this" {
+  count = var.create_ado_resources ? 1 : 0
   name = var.ado_project_name
 }
 
 data "azuredevops_serviceendpoint_azurerm" "this" {
+  count = var.create_ado_resources ? 1 : 0
   project_id            = data.azuredevops_project.this.id
   service_endpoint_name = var.ado_service_connection_azurerm_name
 }
 
 resource "azuredevops_elastic_pool" "this" {
+  count = var.create_ado_resources ? 1 : 0
   name                   = var.ado_vmss_pool_name
   service_endpoint_id    = data.azuredevops_serviceendpoint_azurerm.this.id
   service_endpoint_scope = data.azuredevops_project.this.id
@@ -36,11 +39,13 @@ resource "azuredevops_elastic_pool" "this" {
 }
 
 resource "azuredevops_agent_queue" "this" {
+  count = var.create_ado_resources ? 1 : 0
   project_id    = data.azuredevops_project.this.id
   agent_pool_id = azuredevops_elastic_pool.this.id
 }
 
 resource "azuredevops_pipeline_authorization" "this" {
+  count = var.create_ado_resources ? 1 : 0
   project_id  = data.azuredevops_project.this.id
   resource_id = azuredevops_agent_queue.this.id
   type        = "queue"
