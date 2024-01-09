@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.0.3...v1.1.0) (2024-01-09)
+
+
+### Bug Fixes
+
+* added resource index ([5c293f2](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/5c293f2d96bca6e5d25c88508464e0b94a5add6b))
+* fmt ([d0891cf](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/d0891cf1c86a27bc5cb42a80305aeb43fe60bc71))
+
+
+### Features
+
+* added bool variable ([381fc7d](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/381fc7d294e38780b3774f9fd7f84e94d2cc068a))
+* made ado resources optional ([c1da277](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/c1da27763ee7b9d847d755a9a85f4707e2276c02))
+
 ## [1.0.3](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.0.2...v1.0.3) (2023-12-24)
 
 
