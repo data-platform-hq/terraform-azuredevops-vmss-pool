@@ -18,6 +18,12 @@ variable "subnet_id" {
   type        = string
 }
 
+variable "tags" {
+  type        = map(any)
+  description = "Resource tags"
+  default     = {}
+}
+
 variable "ado_project_name" {
   description = "Target Azure DevOps Project name where VMSS agent pool would be provisioned"
   type        = string
