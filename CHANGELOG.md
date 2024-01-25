@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.1...v1.1.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* updated vmss module version ([ee4e502](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/ee4e502bc18b296d3e13108178a35594d230cea3))
+
 ## [1.1.1](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.0...v1.1.1) (2024-01-24)
 
 
