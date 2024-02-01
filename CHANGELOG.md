@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.2...v1.1.3) (2024-02-01)
+
+
+### Bug Fixes
+
+* support dcr ([ee605b9](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/ee605b9ef260c9a193e60e021b539bd36c21b3ee))
+
 ## [1.1.2](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.1...v1.1.2) (2024-01-25)
 
 
