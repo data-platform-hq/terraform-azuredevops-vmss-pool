@@ -18,12 +18,6 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "tags" {
-  type        = map(any)
-  description = "Resource tags"
-  default     = {}
-}
-
 variable "ado_project_name" {
   description = "Target Azure DevOps Project name where VMSS agent pool would be provisioned"
   type        = string
@@ -60,4 +54,34 @@ variable "create_ado_resources" {
   description = "Boolean flag that determines whether ADO resources will be created"
   type        = bool
   default     = true
+}
+
+variable "analytics_workspace_id" {
+  type        = string
+  description = "Resource ID of Log Analytics Workspace"
+  default     = null
+}
+
+variable "drc_enabled" {
+  type        = bool
+  description = "Enable data collection rule. var.analytics_workspace_id must be provided"
+  default     = false
+}
+
+variable "drc_datasource_name" {
+  type        = string
+  description = "Datasource syslog name"
+  default     = "datasource-syslog"
+}
+
+variable "drc_facility_names" {
+  type        = list(string)
+  description = "List of Facility names"
+  default     = ["daemon", "syslog", "user"]
+}
+
+variable "drc_log_levels" {
+  type        = list(string)
+  description = "List of Log levels"
+  default     = ["Debug"]
 }
