@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.3...v1.1.4) (2024-05-20)
+
+
+### Bug Fixes
+
+* replaced pre-commit repo docs creation/update by GH Actions ([f3dc283](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/f3dc28374af3703ac70da1f2520206ab2a87ff37))
+* vmss default instances set to 0 ([49dabac](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/49dabacb882d1f980d803d71f3692b905de16777))
+
 ## [1.1.3](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.2...v1.1.3) (2024-02-01)
 
 
