@@ -3,6 +3,11 @@ output "vmss_id" {
   description = "VM Scale Sets id"
 }
 
+output "ado_elastic_pool_name" {
+  value       = try(azuredevops_elastic_pool.this[0].name, null)
+  description = "Azure DevOps VMSS pool name"
+}
+
 output "public_ip_prefix" {
   value       = module.vmss.public_ips
   description = "Public IP Address Prefix CIDR"
