@@ -7,13 +7,13 @@ module "vmss" {
   source  = "data-platform-hq/vmss/azurerm"
   version = "1.2.3"
 
-  scale_set_name           = var.vm_scale_set_name
-  location                 = var.location
-  resource_group           = var.resource_group
-  admin_ssh_key            = { public_key = tls_private_key.this.public_key_openssh }
-  subnet_id                = var.subnet_id
-  public_ip_prefix_enabled = var.ado_vmss_public_ip_prefix_enabled
-
+  scale_set_name              = var.vm_scale_set_name
+  location                    = var.location
+  resource_group              = var.resource_group
+  admin_ssh_key               = { public_key = tls_private_key.this.public_key_openssh }
+  subnet_id                   = var.subnet_id
+  public_ip_prefix_enabled    = var.ado_vmss_public_ip_prefix_enabled
+  scale_set_configuration     = var.scale_set_configuration
   enable_data_collection_rule = var.drc_enabled
   analytics_workspace_id      = var.analytics_workspace_id
   facility_names              = var.drc_facility_names

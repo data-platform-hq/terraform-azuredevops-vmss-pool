@@ -73,6 +73,7 @@ module "ado_vmss_agent_pool" {
 | <a name="input_drc_log_levels"></a> [drc\_log\_levels](#input\_drc\_log\_levels) | List of Log levels | `list(string)` | <pre>[<br>  "Debug"<br>]</pre> | no |
 | <a name="input_location"></a> [location](#input\_location) | The Azure Region in which all resources in this example should be created. | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group. | `string` | n/a | yes |
+| <a name="input_scale_set_configuration"></a> [scale\_set\_configuration](#input\_scale\_set\_configuration) | Configuration options for linux virtual machine scale set | <pre>object({<br>    sku                             = optional(string)<br>    instances                       = optional(string)<br>    admin_username                  = optional(string)<br>    admin_password                  = optional(string)<br>    disable_password_authentication = optional(bool)<br>    priority                        = optional(string)<br>    overprovision                   = optional(bool)<br>    single_placement_group          = optional(bool)<br>    upgrade_mode                    = optional(string)<br>    enable_ip_forwarding_interface  = optional(bool)<br>    domain_name_label               = optional(string)<br>    lb_backend_address_pool_ids     = optional(list(string))<br>  })</pre> | <pre>{<br>  "instances": "0"<br>}</pre> | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Subnet where VM Scale Sets would be provisioned | `string` | n/a | yes |
 | <a name="input_vm_scale_set_name"></a> [vm\_scale\_set\_name](#input\_vm\_scale\_set\_name) | VM Scale Sets name | `string` | n/a | yes |
 
@@ -80,6 +81,7 @@ module "ado_vmss_agent_pool" {
 
 | Name | Description |
 |------|-------------|
+| <a name="output_ado_elastic_pool_name"></a> [ado\_elastic\_pool\_name](#output\_ado\_elastic\_pool\_name) | Azure DevOps VMSS pool name |
 | <a name="output_public_ip_prefix"></a> [public\_ip\_prefix](#output\_public\_ip\_prefix) | Public IP Address Prefix CIDR |
 | <a name="output_tls_key"></a> [tls\_key](#output\_tls\_key) | SSH Key for VMSS authorization |
 | <a name="output_vmss_id"></a> [vmss\_id](#output\_vmss\_id) | VM Scale Sets id |

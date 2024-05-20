@@ -56,6 +56,27 @@ variable "create_ado_resources" {
   default     = true
 }
 
+variable "scale_set_configuration" {
+  description = "Configuration options for linux virtual machine scale set"
+  type = object({
+    sku                             = optional(string)
+    instances                       = optional(string)
+    admin_username                  = optional(string)
+    admin_password                  = optional(string)
+    disable_password_authentication = optional(bool)
+    priority                        = optional(string)
+    overprovision                   = optional(bool)
+    single_placement_group          = optional(bool)
+    upgrade_mode                    = optional(string)
+    enable_ip_forwarding_interface  = optional(bool)
+    domain_name_label               = optional(string)
+    lb_backend_address_pool_ids     = optional(list(string))
+  })
+  default = {
+    instances = "0"
+  }
+}
+
 variable "analytics_workspace_id" {
   type        = string
   description = "Resource ID of Log Analytics Workspace"
