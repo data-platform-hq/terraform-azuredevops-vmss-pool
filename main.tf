@@ -5,7 +5,7 @@ resource "tls_private_key" "this" {
 
 module "vmss" {
   source  = "data-platform-hq/vmss/azurerm"
-  version = "1.2.3"
+  version = "1.2.5"
 
   scale_set_name              = var.vm_scale_set_name
   location                    = var.location
@@ -19,6 +19,7 @@ module "vmss" {
   facility_names              = var.drc_facility_names
   log_levels                  = var.drc_log_levels
   datasource_name             = var.drc_datasource_name
+  identity_ids                = var.identity_ids
 }
 
 data "azuredevops_project" "this" {
