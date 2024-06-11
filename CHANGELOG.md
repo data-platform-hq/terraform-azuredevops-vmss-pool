@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.4...v1.1.5) (2024-06-11)
+
+
+### Bug Fixes
+
+* add variable to support identities ([41c1963](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/41c19636ddf8eb8b51af711112c137abd27c1798))
+* support identity block in vmss ([092338c](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/092338ccc819a84a19248700cadecab495f91ef3))
+
 ## [1.1.4](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.3...v1.1.4) (2024-05-20)
 
 
