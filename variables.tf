@@ -106,3 +106,9 @@ variable "drc_log_levels" {
   description = "List of Log levels"
   default     = ["Debug"]
 }
+
+variable "identity_ids" {
+  type        = list(string)
+  description = "List of user assigned identity IDs"
+  default     = null
+}
