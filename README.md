@@ -43,7 +43,7 @@ module "ado_vmss_agent_pool" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.2.3 |
+| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.2.5 |
 
 ## Resources
 
@@ -71,6 +71,7 @@ module "ado_vmss_agent_pool" {
 | <a name="input_drc_enabled"></a> [drc\_enabled](#input\_drc\_enabled) | Enable data collection rule. var.analytics\_workspace\_id must be provided | `bool` | `false` | no |
 | <a name="input_drc_facility_names"></a> [drc\_facility\_names](#input\_drc\_facility\_names) | List of Facility names | `list(string)` | <pre>[<br>  "daemon",<br>  "syslog",<br>  "user"<br>]</pre> | no |
 | <a name="input_drc_log_levels"></a> [drc\_log\_levels](#input\_drc\_log\_levels) | List of Log levels | `list(string)` | <pre>[<br>  "Debug"<br>]</pre> | no |
+| <a name="input_identity_ids"></a> [identity\_ids](#input\_identity\_ids) | List of user assigned identity IDs | `list(string)` | `null` | no |
 | <a name="input_location"></a> [location](#input\_location) | The Azure Region in which all resources in this example should be created. | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group. | `string` | n/a | yes |
 | <a name="input_scale_set_configuration"></a> [scale\_set\_configuration](#input\_scale\_set\_configuration) | Configuration options for linux virtual machine scale set | <pre>object({<br>    sku                             = optional(string)<br>    instances                       = optional(string)<br>    admin_username                  = optional(string)<br>    admin_password                  = optional(string)<br>    disable_password_authentication = optional(bool)<br>    priority                        = optional(string)<br>    overprovision                   = optional(bool)<br>    single_placement_group          = optional(bool)<br>    upgrade_mode                    = optional(string)<br>    enable_ip_forwarding_interface  = optional(bool)<br>    domain_name_label               = optional(string)<br>    lb_backend_address_pool_ids     = optional(list(string))<br>  })</pre> | <pre>{<br>  "instances": "0"<br>}</pre> | no |
