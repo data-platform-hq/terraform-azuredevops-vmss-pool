@@ -43,7 +43,7 @@ module "ado_vmss_agent_pool" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.2.5 |
+| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.2.6 |
 
 ## Resources
 
