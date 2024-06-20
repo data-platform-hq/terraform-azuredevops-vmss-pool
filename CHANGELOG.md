@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.6...v1.1.7) (2024-06-20)
+
+
+### Bug Fixes
+
+* disable public ip assignment by default ([e685539](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/e68553930c512e8cde80cc59912228a00d22804d))
+
 ## [1.1.6](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.5...v1.1.6) (2024-06-20)
 
 
