@@ -29,7 +29,7 @@ module "ado_vmss_agent_pool" {
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
 | <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | >= 0.10.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.75.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 4.0.1 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.5 |
 
 ## Providers
@@ -43,7 +43,7 @@ module "ado_vmss_agent_pool" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.2.6 |
+| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.3.0 |
 
 ## Resources
 
