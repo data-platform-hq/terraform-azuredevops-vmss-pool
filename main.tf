@@ -5,7 +5,7 @@ resource "tls_private_key" "this" {
 
 module "vmss" {
   source  = "data-platform-hq/vmss/azurerm"
-  version = "1.3.0"
+  version = "1.4.0"
 
   scale_set_name              = var.vm_scale_set_name
   location                    = var.location
