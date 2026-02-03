@@ -27,9 +27,9 @@ module "ado_vmss_agent_pool" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 | <a name="requirement_azuredevops"></a> [azuredevops](#requirement\_azuredevops) | >= 0.10.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 4.0.1 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.5 |
 
 ## Providers
@@ -43,7 +43,7 @@ module "ado_vmss_agent_pool" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.3.0 |
+| <a name="module_vmss"></a> [vmss](#module\_vmss) | data-platform-hq/vmss/azurerm | 1.4.0 |
 
 ## Resources
 
@@ -62,19 +62,19 @@ module "ado_vmss_agent_pool" {
 |------|-------------|------|---------|:--------:|
 | <a name="input_ado_project_name"></a> [ado\_project\_name](#input\_ado\_project\_name) | Target Azure DevOps Project name where VMSS agent pool would be provisioned | `string` | n/a | yes |
 | <a name="input_ado_service_connection_azurerm_name"></a> [ado\_service\_connection\_azurerm\_name](#input\_ado\_service\_connection\_azurerm\_name) | Name of existing Azure DevOps Service Connection AzureRM that points to Azure Subscription with VMSS used in agent pool | `string` | n/a | yes |
-| <a name="input_ado_vmss_pool_configuration"></a> [ado\_vmss\_pool\_configuration](#input\_ado\_vmss\_pool\_configuration) | Object with configuration options for Azure DevOps VMSS agent pool | <pre>object({<br>    desired_idle           = optional(number, 0)<br>    max_capacity           = optional(number, 3)<br>    time_to_live_minutes   = optional(number, 30)<br>    recycle_after_each_use = optional(bool, false)<br>  })</pre> | `{}` | no |
+| <a name="input_ado_vmss_pool_configuration"></a> [ado\_vmss\_pool\_configuration](#input\_ado\_vmss\_pool\_configuration) | Object with configuration options for Azure DevOps VMSS agent pool | <pre>object({<br/>    desired_idle           = optional(number, 0)<br/>    max_capacity           = optional(number, 3)<br/>    time_to_live_minutes   = optional(number, 30)<br/>    recycle_after_each_use = optional(bool, false)<br/>  })</pre> | `{}` | no |
 | <a name="input_ado_vmss_pool_name"></a> [ado\_vmss\_pool\_name](#input\_ado\_vmss\_pool\_name) | Given name to Azure DevOps VMSS agent pool | `string` | n/a | yes |
 | <a name="input_ado_vmss_public_ip_prefix_enabled"></a> [ado\_vmss\_public\_ip\_prefix\_enabled](#input\_ado\_vmss\_public\_ip\_prefix\_enabled) | Boolean flag that determines whether Public IP Prefix is assigned to VM Scale Sets | `bool` | `false` | no |
 | <a name="input_analytics_workspace_id"></a> [analytics\_workspace\_id](#input\_analytics\_workspace\_id) | Resource ID of Log Analytics Workspace | `string` | `null` | no |
 | <a name="input_create_ado_resources"></a> [create\_ado\_resources](#input\_create\_ado\_resources) | Boolean flag that determines whether ADO resources will be created | `bool` | `true` | no |
 | <a name="input_drc_datasource_name"></a> [drc\_datasource\_name](#input\_drc\_datasource\_name) | Datasource syslog name | `string` | `"datasource-syslog"` | no |
 | <a name="input_drc_enabled"></a> [drc\_enabled](#input\_drc\_enabled) | Enable data collection rule. var.analytics\_workspace\_id must be provided | `bool` | `false` | no |
-| <a name="input_drc_facility_names"></a> [drc\_facility\_names](#input\_drc\_facility\_names) | List of Facility names | `list(string)` | <pre>[<br>  "daemon",<br>  "syslog",<br>  "user"<br>]</pre> | no |
-| <a name="input_drc_log_levels"></a> [drc\_log\_levels](#input\_drc\_log\_levels) | List of Log levels | `list(string)` | <pre>[<br>  "Debug"<br>]</pre> | no |
+| <a name="input_drc_facility_names"></a> [drc\_facility\_names](#input\_drc\_facility\_names) | List of Facility names | `list(string)` | <pre>[<br/>  "daemon",<br/>  "syslog",<br/>  "user"<br/>]</pre> | no |
+| <a name="input_drc_log_levels"></a> [drc\_log\_levels](#input\_drc\_log\_levels) | List of Log levels | `list(string)` | <pre>[<br/>  "Debug"<br/>]</pre> | no |
 | <a name="input_identity_ids"></a> [identity\_ids](#input\_identity\_ids) | List of user assigned identity IDs | `list(string)` | `null` | no |
 | <a name="input_location"></a> [location](#input\_location) | The Azure Region in which all resources in this example should be created. | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group. | `string` | n/a | yes |
-| <a name="input_scale_set_configuration"></a> [scale\_set\_configuration](#input\_scale\_set\_configuration) | Configuration options for linux virtual machine scale set | <pre>object({<br>    sku                             = optional(string)<br>    instances                       = optional(string)<br>    admin_username                  = optional(string)<br>    admin_password                  = optional(string)<br>    disable_password_authentication = optional(bool)<br>    priority                        = optional(string)<br>    overprovision                   = optional(bool)<br>    single_placement_group          = optional(bool)<br>    upgrade_mode                    = optional(string)<br>    enable_ip_forwarding_interface  = optional(bool)<br>    domain_name_label               = optional(string)<br>    lb_backend_address_pool_ids     = optional(list(string))<br>  })</pre> | <pre>{<br>  "instances": "0"<br>}</pre> | no |
+| <a name="input_scale_set_configuration"></a> [scale\_set\_configuration](#input\_scale\_set\_configuration) | Configuration options for linux virtual machine scale set | <pre>object({<br/>    sku                             = optional(string)<br/>    instances                       = optional(string)<br/>    admin_username                  = optional(string)<br/>    admin_password                  = optional(string)<br/>    disable_password_authentication = optional(bool)<br/>    priority                        = optional(string)<br/>    overprovision                   = optional(bool)<br/>    single_placement_group          = optional(bool)<br/>    upgrade_mode                    = optional(string)<br/>    enable_ip_forwarding_interface  = optional(bool)<br/>    domain_name_label               = optional(string)<br/>    lb_backend_address_pool_ids     = optional(list(string))<br/>  })</pre> | <pre>{<br/>  "instances": "0"<br/>}</pre> | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Subnet where VM Scale Sets would be provisioned | `string` | n/a | yes |
 | <a name="input_vm_scale_set_name"></a> [vm\_scale\_set\_name](#input\_vm\_scale\_set\_name) | VM Scale Sets name | `string` | n/a | yes |
 
