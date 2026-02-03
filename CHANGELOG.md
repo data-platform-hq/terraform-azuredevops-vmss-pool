@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.2.0...v1.3.0) (2026-02-03)
+
+
+### Features
+
+* upgrade provider to AzureRM v4.0 ([6442a53](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/commit/6442a53b59d8a4943908a509ebe775552642807a))
+
 # [1.2.0](https://github.com/data-platform-hq/terraform-azuredevops-vmss-pool/compare/v1.1.7...v1.2.0) (2024-09-16)
 
 
